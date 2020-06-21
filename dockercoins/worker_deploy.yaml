@@ -3,15 +3,15 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2020-06-21T11:17:10Z"
+  creationTimestamp: "2020-06-21T11:46:34Z"
   generation: 1
   labels:
     app: worker
   name: worker
   namespace: default
-  resourceVersion: "19397"
+  resourceVersion: "2059"
   selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/worker
-  uid: 0ed2a2b6-221f-4463-927b-91ab8de74401
+  uid: aa06fdfd-d7d5-4cac-934c-2d3f8eb25136
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -45,14 +45,14 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2020-06-21T11:18:23Z"
-    lastUpdateTime: "2020-06-21T11:18:23Z"
+  - lastTransitionTime: "2020-06-21T11:46:35Z"
+    lastUpdateTime: "2020-06-21T11:46:35Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2020-06-21T11:17:10Z"
-    lastUpdateTime: "2020-06-21T11:18:23Z"
+  - lastTransitionTime: "2020-06-21T11:46:34Z"
+    lastUpdateTime: "2020-06-21T11:46:35Z"
     message: ReplicaSet "worker-745744775c" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"

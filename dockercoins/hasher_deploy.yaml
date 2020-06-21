@@ -3,15 +3,15 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2020-06-21T11:17:07Z"
+  creationTimestamp: "2020-06-21T11:46:32Z"
   generation: 1
   labels:
     app: hasher
   name: hasher
   namespace: default
-  resourceVersion: "19325"
+  resourceVersion: "2052"
   selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/hasher
-  uid: 2bcb6796-c5b3-4520-9c95-81ff0af1c3d2
+  uid: aadb1598-9b54-409a-863c-151abe120c59
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -45,14 +45,14 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2020-06-21T11:17:51Z"
-    lastUpdateTime: "2020-06-21T11:17:51Z"
+  - lastTransitionTime: "2020-06-21T11:46:34Z"
+    lastUpdateTime: "2020-06-21T11:46:34Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2020-06-21T11:17:07Z"
-    lastUpdateTime: "2020-06-21T11:17:51Z"
+  - lastTransitionTime: "2020-06-21T11:46:32Z"
+    lastUpdateTime: "2020-06-21T11:46:34Z"
     message: ReplicaSet "hasher-7b98b6966d" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"

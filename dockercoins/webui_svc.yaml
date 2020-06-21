@@ -1,117 +1,25 @@
 apiVersion: v1
-items:
-- apiVersion: v1
-  kind: Service
-  metadata:
-    annotations:
-      fluxcd.io/sync-checksum: 88ba66ba318f125ea12bd521b59dbe9e11a8ab49
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"fluxcd.io/sync-checksum":"88ba66ba318f125ea12bd521b59dbe9e11a8ab49"},"creationTimestamp":"2020-06-21T11:17:40Z","labels":{"app":"hasher","fluxcd.io/sync-gc-mark":"sha256.dnHrnVQtBvMxy5CZ6DX7UVGztMslCoCi94FXdOIqdro"},"name":"hasher","namespace":"default","resourceVersion":"19290","selfLink":"/api/v1/namespaces/default/services/hasher","uid":"a4debf59-5752-41bb-9cac-77a5e1726a74"},"spec":{"clusterIP":"10.110.17.146","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"hasher"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
-    creationTimestamp: "2020-06-21T11:34:12Z"
-    labels:
-      app: hasher
-      fluxcd.io/sync-gc-mark: sha256.dnHrnVQtBvMxy5CZ6DX7UVGztMslCoCi94FXdOIqdro
-    name: hasher
-    namespace: default
-    resourceVersion: "1663"
-    selfLink: /api/v1/namespaces/default/services/hasher
-    uid: 0159444b-8aa1-4561-b3e8-ebeec3daa9af
-  spec:
-    clusterIP: 10.110.17.146
-    ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 80
-    selector:
-      app: hasher
-    sessionAffinity: None
-    type: ClusterIP
-  status:
-    loadBalancer: {}
-- apiVersion: v1
-  kind: Service
-  metadata:
-    creationTimestamp: "2020-05-10T08:04:31Z"
-    labels:
-      component: apiserver
-      provider: kubernetes
-    name: kubernetes
-    namespace: default
-    resourceVersion: "148"
-    selfLink: /api/v1/namespaces/default/services/kubernetes
-    uid: 6c31b068-e809-467a-8dc9-92ac1471b3b9
-  spec:
-    clusterIP: 10.96.0.1
-    ports:
-    - name: https
-      port: 443
-      protocol: TCP
-      targetPort: 6443
-    sessionAffinity: None
-    type: ClusterIP
-  status:
-    loadBalancer: {}
-- apiVersion: v1
-  kind: Service
-  metadata:
-    annotations:
-      fluxcd.io/sync-checksum: 43bfc87587dbc4aefbf25fe2fe5b28913f2d9b35
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"fluxcd.io/sync-checksum":"43bfc87587dbc4aefbf25fe2fe5b28913f2d9b35"},"labels":{"app":"redis","fluxcd.io/sync-gc-mark":"sha256.fr13tsjkZxFJK03BgEbgN8koXfl-PGvBz4iIr1ULhwo"},"name":"redis","namespace":"default"},"spec":{"clusterIP":"10.102.165.5","ports":[{"port":6379,"protocol":"TCP","targetPort":6379}],"selector":{"app":"redis"},"sessionAffinity":"None","type":"LoadBalancer"}}
-    creationTimestamp: "2020-06-21T11:34:12Z"
-    labels:
-      app: redis
-      fluxcd.io/sync-gc-mark: sha256.fr13tsjkZxFJK03BgEbgN8koXfl-PGvBz4iIr1ULhwo
-    name: redis
-    namespace: default
-    resourceVersion: "1714"
-    selfLink: /api/v1/namespaces/default/services/redis
-    uid: c2f89b2d-6656-46f5-9faa-29777454ccf4
-  spec:
-    clusterIP: 10.102.165.5
-    externalTrafficPolicy: Cluster
-    ports:
-    - nodePort: 30124
-      port: 6379
-      protocol: TCP
-      targetPort: 6379
-    selector:
-      app: redis
-    sessionAffinity: None
-    type: LoadBalancer
-  status:
-    loadBalancer:
-      ingress:
-      - ip: 172.17.0.201
-- apiVersion: v1
-  kind: Service
-  metadata:
-    annotations:
-      fluxcd.io/sync-checksum: 868ae6bc2feaf08e738e73ba734bf16ab985f87a
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"fluxcd.io/sync-checksum":"868ae6bc2feaf08e738e73ba734bf16ab985f87a"},"creationTimestamp":"2020-06-21T11:17:40Z","labels":{"app":"rng","fluxcd.io/sync-gc-mark":"sha256.ZNVEHOtPKXxWzUEFO3OgS1JL1tfYCmeaIdma8lzr79E"},"name":"rng","namespace":"default","resourceVersion":"19287","selfLink":"/api/v1/namespaces/default/services/rng","uid":"6d2990d3-8320-46ab-9d0e-150d98d99b9d"},"spec":{"clusterIP":"10.104.63.71","ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"rng"},"sessionAffinity":"None","type":"ClusterIP"},"status":{"loadBalancer":{}}}
-    creationTimestamp: "2020-06-21T11:34:12Z"
-    labels:
-      app: rng
-      fluxcd.io/sync-gc-mark: sha256.ZNVEHOtPKXxWzUEFO3OgS1JL1tfYCmeaIdma8lzr79E
-    name: rng
-    namespace: default
-    resourceVersion: "1720"
-    selfLink: /api/v1/namespaces/default/services/rng
-    uid: 226f99a3-3480-4a70-ba89-d4107343ded8
-  spec:
-    clusterIP: 10.104.63.71
-    ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 80
-    selector:
-      app: rng
-    sessionAffinity: None
-    type: ClusterIP
-  status:
-    loadBalancer: {}
-kind: List
+kind: Service
 metadata:
-  resourceVersion: ""
-  selfLink: ""
+  creationTimestamp: "2020-06-21T11:47:13Z"
+  labels:
+    app: webui
+  name: webui
+  namespace: default
+  resourceVersion: "2126"
+  selfLink: /api/v1/namespaces/default/services/webui
+  uid: 782d01eb-dcb5-407d-a292-9bec4a7fe348
+spec:
+  clusterIP: 10.102.94.55
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 30670
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: webui
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
