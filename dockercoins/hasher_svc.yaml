@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-06-21T11:17:40Z"
+  labels:
+    app: hasher
+  name: hasher
+  namespace: default
+  resourceVersion: "19290"
+  selfLink: /api/v1/namespaces/default/services/hasher
+  uid: a4debf59-5752-41bb-9cac-77a5e1726a74
+spec:
+  clusterIP: 10.110.17.146
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: hasher
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
