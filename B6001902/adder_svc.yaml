@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-06-21T15:06:21Z"
+  labels:
+    app: adder
+  name: adder
+  namespace: default
+  resourceVersion: "2187"
+  selfLink: /api/v1/namespaces/default/services/adder
+  uid: 03352466-f1cf-492f-9161-a80240236c43
+spec:
+  clusterIP: 10.110.110.41
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: adder
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

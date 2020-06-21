@@ -1,0 +1,117 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      app: adder
+    name: adder
+    namespace: default
+  spec:
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: adder
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-06-21T15:06:23Z"
+    labels:
+      app: front
+    name: front
+    namespace: default
+    resourceVersion: "2199"
+    selfLink: /api/v1/namespaces/default/services/front
+    uid: 78e3ca72-7068-450e-82eb-c1145d470ff7
+  spec:
+    clusterIP: 10.96.236.39
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 32114
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: front
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 172.17.0.201
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "148"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: 6c31b068-e809-467a-8dc9-92ac1471b3b9
+  spec:
+    clusterIP: 10.96.0.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      app: source
+    name: source
+    namespace: default
+    resourceVersion: "2183"
+    selfLink: /api/v1/namespaces/default/services/source
+    uid: 58f67de3-c0f0-4049-962d-629f5fdf76c4
+  spec:
+    clusterIP: 10.109.105.10
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: source
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      app: suber
+    name: suber
+    namespace: default
+    resourceVersion: "2190"
+    selfLink: /api/v1/namespaces/default/services/suber
+    uid: d3a15c10-c012-499c-b7f1-e040717ed59d
+  spec:
+    clusterIP: 10.111.35.40
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: suber
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
