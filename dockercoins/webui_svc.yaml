@@ -1,25 +1,27 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2020-06-21T11:47:13Z"
+  creationTimestamp: "2020-06-21T12:04:17Z"
   labels:
     app: webui
   name: webui
   namespace: default
-  resourceVersion: "2126"
+  resourceVersion: "3535"
   selfLink: /api/v1/namespaces/default/services/webui
-  uid: 782d01eb-dcb5-407d-a292-9bec4a7fe348
+  uid: 8f698248-d952-4d85-8b12-03e24ba06f01
 spec:
-  clusterIP: 10.102.94.55
+  clusterIP: 10.99.111.24
   externalTrafficPolicy: Cluster
   ports:
-  - nodePort: 30670
+  - nodePort: 30905
     port: 80
     protocol: TCP
     targetPort: 80
   selector:
     app: webui
   sessionAffinity: None
-  type: NodePort
+  type: LoadBalancer
 status:
-  loadBalancer: {}
+  loadBalancer:
+    ingress:
+    - ip: 172.17.0.200
